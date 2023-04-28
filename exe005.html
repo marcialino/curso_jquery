@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <label>Digite o seu nome:</label>
+    <input type="text" id="nome">
+    <p id="texto"></p>
+
+    <script>
+        /*comando keyup: quando a tecla for liberada. Você escreveu e soltou a tecla. O segundo comando, indica que o nome que for escrito no input será escrito no parágrado.*/
+        $('#nome').keyup(()=>{
+            $('#texto').text($('#nome').val())
+        })
+    </script>
+</body>
+</html>

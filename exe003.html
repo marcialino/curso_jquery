@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!--Para rodar a jQuery direto, o script deve ser colocado depois do código, no Body. Mas, se quiser colocar abaixo do head, use a função abaixo-->
+
+    <script>
+        $(document).ready(rodar)
+        function rodar(){
+            $('#texto').text('CFB Cursos')
+        }
+    </script>
+
+</head>
+<body>
+    <p id="texto"></p>
+</body>
+</html>

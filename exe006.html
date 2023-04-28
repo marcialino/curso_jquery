@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="calc">
+        <label>Valor 1:</label>
+        <input type="text" id="v1" value="0">
+        <br/><br/>
+        <label>Valor 2:</label>
+        <input type="text" id="v2" value="0">
+        <br/> <br/>
+           <input type="button" value="Somar JQ" id="btn">
+           <br/> <br/>
+           <label>Resultado</label>
+            <input type="text" id="res">
+    </div>
+
+   <script>
+    $('#btn').click(()=>{
+      var v1 = parseInt($('#v1').val())
+      var v2 = parseInt($('#v2').val())
+       var soma = v1+v2
+       $('#res').val(soma)
+    })
+  
+   </script>
+    
+</body>
+</html>

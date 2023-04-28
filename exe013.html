@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="bloco"></div>
+    <p id="texto">Clique aqui</p>
+    <p id="p1"></p>
+
+    <script>
+        $('#bloco').on({
+            click:()=>{$('#p1').text('Clicou no quadrado')},
+            mouseenter:()=>{$('#p1').css('color','#c21f40')},
+    })
+  
+    </script>
+</body>
+</html>

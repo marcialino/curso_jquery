@@ -14,19 +14,29 @@
             height: 200px;
             background-color: blueviolet;
         }
+        #bl{
+            width: 200px;
+            height: 200px;
+            background-color:#F0D102;
+        }
     </style>
 
 </head>
 <body>
     <div id="bloco"></div>
-    <p id="texto">Clique aqui</p>
-    <p id="p1"></p>
-
+  
+    
+    <p id="texto"></p>
+  
     <script>
+        /*O on permite trabalhar com vários eventos.*/
         $('#bloco').on({
-            click:()=>{$('#p1').text('Clicou no quadrado')},
-            mouseenter:()=>{$('#p1').css('color','#c21f40')},
-    })
+           click:() =>{$('#texto').text('Clicou  o quadrado.')},
+           mouseenter:()=>{$('#texto').text('Entrou no quadrado.')},
+           mouseleave:()=>{$('#texto').css('color', '#0237E6')},
+           
+        })
+           
   
     </script>
 </body>

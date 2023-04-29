@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        #bloco2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--Para separar os blocos use: justify-content:space-around-->
+    <div style="display:flex; justify-content: space-around;">
+        <div id="bloco"></div>
+        <br/> <br/>
+        <div id="bloco2"></div>
+        
+    </div>
+    <p id="texto"></p>
+
+    <script>
+        $('#bloco'). on({
+            click: ()=>{$('#texto').text('O quadrado foi clicado')},
+            mouseleave:()=>{$('#texto').text('O mouse saiu do quadrado')},
+            
+        })
+        $('#bloco2').click(()=>{
+            $('#bloco').trigger('click')
+        })
+
+        /*a função trigger dispara um evento sem ele ainda ter acontecido. No caso acima, você clicou no bloco2 para disparar um evento no bloco*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <p id="texto"></p>
+
+    <script>
+        /*pageX é a posiçao do eixo x do mouse no documento. pageY, dá a posição Y do mouse.*/
+       var pmx = 0
+       var pmy = 0
+       
+        $(document).mousemove((event)=>{
+
+            pmx = event.pageX
+            pmy = event.pageY
+           
+            $('#texto').text(`Mouse X: ${pmx}px; Mouse Y: ${pmy}px`)
+
+            if(pmx > 500){
+                console.log('Posição de X maior que 500px')
+            }
+            /*Para ver a mensagem acima, você deve clicar em inspecionar e console.*/
+
+         
+
+        })
+    </script>
+</body>
+</html>

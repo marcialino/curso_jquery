@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <div>
+        <span>
+            <h3>CFB Cursos</h3>
+            <h4>Márcia Lino</h4>
+            <p>Curso jQuery</p>
+            <h2>Seletores Irmãos</h2>
+            <p>Siblings</p>
+        </span>
+    </div>
+
+    <script>
+        /*Siblings: irmãos, elementos que estão no mesmo nível. OS que estão a direita, são os que estão depois do elemento selecionado, os que estão à esquerda são os que estão antes.
+        next: aponta para o elemento irmão, imediatamente abaixo
+        prev: aponta para o elemento irmão imediatamente acima
+        prevAll: para todos irmãos acima
+        nextAll: para todos os elementos irmão abaixo
+        prevUntil: seleciona os irmãos até um determinado elemento acima
+        nextUntil: todos os irmãos abaixo, até u determinado elemento*/
+        
+        $('h3').siblings().css({'border' : '1px solid #f00' })
+
+        $('h2').siblings('p').css({'font' : 'normal 14pt arial', 'color': '#00f'})
+        $('h3').next().css({'font' : 'bold 16pt arial', 'color' : '#0f0'})
+        $('h4').prev().css({'font' : 'bold 18pt arial', 'color' : '#00f'})
+    </script>
+</body>
+</html>

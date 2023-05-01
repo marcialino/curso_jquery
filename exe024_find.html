@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <div>
+        
+            <ul>
+                <li>CFB Cursos</li>
+                <li>Curso de jQuery</li>
+                <li>Seletores parent</li>
+            </ul>
+            <ul>
+                <li>CFB Cursos</li>
+                <li>Curso de jQuery</li>
+                <li>Seletores parent</li>
+            </ul>
+    </div>
+
+    <script>
+        /*find: você identifica na função qual elemento você quer encontrar.
+        find('ul:first') para selecionar a primeira ul
+         find('ul:last') para selecionar a última ul
+         find('*') para selecionar a última ul*/
+
+        $('div').find('ul:first').css({'border' : ' 2px solid #f00'})
+        $('div').find('ul:last').css({'border' : '3px solid #00f'})
+        $('div').find('*').css({'font' : 'normal 12pt arial'})
+    </script>
+</body>
+</html>

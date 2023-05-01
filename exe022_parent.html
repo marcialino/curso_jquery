@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <h3>CFB Cursos </h3>
+                <span>Curso de jQuery</span>
+                <p>Seletores parent</p>
+
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        /*parent() - Esse código aponta para o elemento pai do elemento(imediatamente acima) que você está trabalhando. Eemplo: pega a div e formata o body que é o seu pai.
+        parents() - aponta de uma só vez para todos os elementos pais do elemento que você está trabalhando. Exemplo, se estiver trabalhando com o p, ele apontará para: li, ul, div e body, de uma só vez.
+        parentsUntil: você aponta para um elemento e seleciona até um determinado elemento. Todos que estiverem antes desse receberão a formatação*/
+        $('p').parent().css({'border' : '2px solid #f00'})
+        $('li').parent().css({'border' : '2px solid #00f'})
+        $('ul').parent().css({'border' : '2px solid #000f'})
+        $('div').parent().css({'border' : '2px solid #ff0'})
+        $('body').parent().css({'border' : '2px solid #0f0'})
+        $('p').parents().css({'font' : 'bold 14pt arial'})
+
+        $('span').parentsUntil('h3').css({'font' : 'bold 20pt Arial'})
+    </script>
+</body>
+</html>

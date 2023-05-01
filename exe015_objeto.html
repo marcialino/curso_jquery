@@ -12,6 +12,43 @@
 
 </head>
 <body>
-    
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        #bloco2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--Para separar os blocos use: justify-content:space-around-->
+    <div style="display:flex; justify-content: space-around;">
+        <div id="bloco"></div>
+        <br/> <br/>
+        <div id="bloco2"></div>
+        
+    </div>
+    <p id="texto"></p>
+
+    <script>
+        /*Para mudar a cor do quadrado quando ele for clicado.*/
+
+        $('#bloco').click(()=>{
+          $('#bloco').css({'background-color' : ' #00f'})
+        })
+        $('#bloco2').click(()=>{
+            $('#bloco2').css({'background-color' : '#0f0'})
+        })
+       
+
+        
+    </script>
 </body>
 </html>

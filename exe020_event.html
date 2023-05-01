@@ -17,8 +17,13 @@
 
     <script>
        $(document).on({
-        click:()=> $('#resultado').text(event.type + ':' + event.which)
-        
+        click:()=>{$('#resultado').text(event.type + ':' + event.which)},
+        keydown:()=>{
+            $('#resultato').text(event.type + ':' + event.which)
+            if (event.which == 13){
+                alert('ENTER Pressionado')
+            }
+        }
        })
         
     </script>

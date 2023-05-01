@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+    <style>
+        div{
+            border: 3px solid red;
+            padding: 10px;
+            
+        }
+        p{
+            border: 3px solid #00f;
+            padding: 10px;
+        }
+        span{
+            border: 3px solid #0f0;
+            padding: 10px; 
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <p>
+            Márcia Lino <br/> <br/> <br/>
+            <span>Estudante de Tecnologia</span>
+        </p>
+    </div>
+
+    <script>
+        /* event.stopPropagation(): Usa esse código para parar a propagação do evneto. Para evitar que, se você clicar na Div dispare o evento também no p e no span, que estão dentro da Div*/
+        $('div').click(()=>{alert('Disparado uma DIV')})
+        $('p').click((event)=>{event.stopPropagation(); alert('Disparado um p')})
+        $('span').click((event)=>{event.stopPropagation(); alert('Disparado um span')})
+    </script>
+</body>
+</html>

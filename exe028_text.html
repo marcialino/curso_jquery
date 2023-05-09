@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+
+    <div id="mac">
+        <h1>Márcia Lino</h1>
+        <p>Estudante de tecnologia</p>
+    </div>
+    <h2 id="caixa">CFB Cursos</h2>
+    <h2>Curso jQuery</h2>
+    <input type="text" id="nome">
+
+    <script>
+
+        /*quando clicar no texto, o mesmo aparece escrito na caixa alert.*/
+        /*$('h2').click(
+            function(){
+                alert('Texto: ' + $(this).text())
+            }
+        )*/
+
+        /*pode escolher qualquer elemento. No caso abaixo selecionou apenas o elemento do id = caixa*/
+        $('#caixa').click(
+            function(){
+                alert('Texto: ' + $(this).text())
+            }
+        )
+        /*O método val, pega o valor do que foi preenchido em input, por exemplo. Se você clicar ,inicialmente não aparece nada, depois que você escrever algo no input, clicar, aparece o que você escreveu*/
+        $('#nome').click(
+            function(){
+                alert('Texto: ' + $(this).val())
+            }
+        )
+        $('#mac').click(
+            function(){
+                alert('Texto:' + $(this).html())
+            }
+        )
+            
+        
+    </script>
+</body>
+</html>

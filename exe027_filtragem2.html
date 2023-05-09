@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+    <style>
+        p{
+            background-color: #ffa;
+        }
+
+        h3{
+            background-color: #afa;
+        }
+        .borda{
+            border: 2px solid #f00;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="borda">CFB Cursos</p>
+   <h3>CFB Cursos</h3>
+   <p>Curso de Canvas</p>
+   <h3>Curso de Canvas</h3>
+   <p>YouTube</p>
+   <h3>YouTube</h3>
+   <p class="borda">www.cursocfb.com.br</p>
+   <h3>www.cursocfb.com.br</h3>
+   <p>Filtragem de elementos</p>
+   <h3>Filtragem de Elementos</h3>
+
+   <script>
+
+    /* Filter: método que seleciona os elementos de uma mesma classe.
+    Not: método que seleciona os elementos que não estão dentro de uma classe definida*/
+    $('p').filter('.borda').css({'color': '#f00'})
+    $('p').not('.borda').css({'color': '#00f'})
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <p>CFB Cursos</p>
+
+    <h3>CFB Cursos</h3>
+    <p>Curso de Canvas</p>
+    <h3>Curso de Canvas</h3>
+    <p>YouTube.com/cfbcursos</p>
+    <h3>YouTube.com/cfbcursos</h3>
+    <p>www.cfbcursos.com.br</p>
+    <h3>www.cfbcursos.com.br</h3>
+    <p>Filtragem de Elementos</p>
+
+    <h3>Filtragem de Elementos</h3>
+
+    <script>
+
+        /*Método First: seleciona o primeiro elemento. Last: o último. eq: seleciona os elementos intermediários. Depois do first vem 0 eq1*/
+        $('p').first().css({'border': '1px solid #f00', 'background-color': '#ffa' })
+
+        $('p').eq(1).css({'border': '1px solid #f00', 'background-color': '#aaf' })
+
+        $('p').eq(2).css({'border': '1px solid #f00', 'background-color': '#faa' })
+
+        $('p').last().css({'border': '1px solid #f00', 'background-color': '#afa','font': 'bold 12pt Verdana' })
+    </script>
+</body>
+</html>

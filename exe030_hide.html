@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+    
+<style>
+    .caixa{
+        border: 1px solid #000;
+        width: 200px;
+        height: 200px;
+        background-color: #f00;
+
+    }
+  
+</style>
+
+</head>
+<body>
+     <div id="caixa" class="caixa">
+        <h3>CFB Cursos</h3>
+        <p>Curso jQuery</p>
+    </div>
+
+    <button id="btn_mostrar">Mostrar</button>
+    <button id="btn_ocultar">Ocultar</button>
+
+    <script>
+        /*Método Show: para mostrar um elemento
+        Método Hide: para ocultar  um elemento*/
+        $('#btn_mostrar').click(
+            function(){
+                $('#caixa').show()
+            }
+        )
+        $('#btn_ocultar').click(
+            function(){
+                $('#caixa').hide()
+            }
+        )
+    </script>
+</body>
+</html>

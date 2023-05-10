@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Calculadora Básica de Multiplicar</h1>
+    <p><label>Insira o primeiro número</label> <input type="text" name="num1" id="num1"></p>
+    <p><label>Insira o segundo número </label> <input type="text" name="num2" id="num2"></p>
+    <p><button id="btn_js">Multiplicar JS</button> <button id="btn_jq">Multiplicar JQ</button></p>
+
+    <p id="res">Insira os dados e clique nos botões para calcular!</p>
+    
+    <script>
+        var btn_js = document.getElementById('btn_js').addEventListener('click', ()=>{
+            var num1 = document.getElementById('num1').value 
+            var num2 = document.getElementById('num2').value 
+            var multi = num1*num2
+            var res = document.getElementById('res').innerHTML(multi)
+        })
+    </script>
+
+
+
+</body>
+</html>

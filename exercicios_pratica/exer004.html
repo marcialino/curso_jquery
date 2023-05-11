@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Calculadora Básica de Somar</h1>
+    <label>Valor 1</label>
+    <input type="text" id="num1" value="0">
+    <br/><br/>
+
+    <label>Valor 2</label>
+    <input type="text" id="num2" value="0">
+    <br/><br/>
+
+    <input type="button" id="btn1" value="SOMAR JS">
+    <input type="button" id="btn2" value="SOMAR JQ">
+
+    <p id="res">Insira dos dados e clique para ver os resultados</p>
+
+  <script>
+   
+        document.getElementById('btn1').addEventListener('click', function(){
+            var num1 = parseInt(document.getElementById('num1').value) 
+            var num2 = parseInt(document.getElementById('num2').value)
+            var soma = num1 + num2
+            document.getElementById('res').innerHTML = soma
+        })
+        
+      
+        
+
+    </script>
+</body>
+</html>

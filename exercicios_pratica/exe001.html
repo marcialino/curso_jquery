@@ -10,26 +10,24 @@
     </script>
 </head>
 <body>
-    <h1>Calculadora Básica de Somar</h1>
-    <p><label>Valor 1:</label> <input type="text" name="num1" id="num1"> </p>
+      <h1>Calculadora Básica de Somar</h1>
+
+      <p><label>Valor 1</label> <input type="text" id="num1" value="0"> </p> 
+      <p><label>Valor 2</label>  <input type="text" id="num2" value="0"></p>
+
+      <p><input type="button" id="btn_js" value="SOMAR JS">  <input type="button" id="btn_jq" value="SOMAR JQ"></p>
+      <p id="res">Insira dos dados e clique para ver os resultados!</p>
     
-    <p><label>Valor 2:</label> <input type="text" name="num2" id="num2"></p>
-       
-    <p><button id="btn1">SOMAR JS</button> <button id="btn_jq">SOMAR JQ</button></p>
-
-    <p id="res">Preencha os dados para ver o resultado!</p>
-
+    
     <script>
-       var btn1 = document.getElementById('btn1').addEventListener('click', ()=>{
+        
+        var btn_js = document.getElementById('btn_js').addEventListener('click', function(){
             var num1 = parseInt(document.getElementById('num1').value)
-
             var num2 = parseInt(document.getElementById('num2').value)
-
             var soma = num1 + num2
-            var res = document.getElementById('res').value = soma
+            document.getElementById('res').innerHTML = soma
         })
-     
-
+      
 
         $('#btn_jq').click(()=>{
             var num1 = parseInt($('#num1').val())
@@ -38,7 +36,6 @@
             $('#res').text(soma)
         })
      
-
     </script>
 
 </body>

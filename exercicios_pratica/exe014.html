@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Evento Submit</h1>
+
+    <form>
+        <p><label>Nome:</label> <input type="text" name="nome" id="nome"></p>
+        <p><label>Cidade onde mora:</label><input type="text" id="cid"></p>
+        <p><label>Contato</label> <input type="text" id="contato"></p>
+        <p><input type="submit" value="Enviar" id="btn"></p>
+    </form>
+   
+
+    <script>
+        
+        $('form').submit(()=>{
+            var nome = $('#nome').val()
+            var cid = $('#cid').val()
+            var contato = $('#contato').val()
+
+            if(nome.length==0 || cid.length == 0 || contato.length == 0){
+                alert('Preencha os dados e tente novamente')
+            }else
+            alert('Formulário enviado!')
+        })
+    </script>
+</body>
+</html>

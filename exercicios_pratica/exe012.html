@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        #bloco{
+            background-color:#5e363f  ;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover e Mouseleave</h1>
+
+    <p id="bloco"></p>
+
+    <script>
+        $('#bloco').hover(()=>{
+            $('#bloco').css('background-color','#ff494b')
+            .mouseleave(()=>{
+                $('#bloco').css('background-color', '#f49859')
+            })
+
+        })
+    </script>
+</body>
+</html>

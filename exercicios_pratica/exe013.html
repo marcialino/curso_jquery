@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Keypress</h1>
+    <p><label>Digite o texto aqui:</label> <input type="text" id="txt"></p>
+    <p id="p1"></p>
+
+    <script>
+        $('#txt').keypress(()=>{
+            $('#p1').text($('#txt').val())
+            $('#p1').css({'font': 'bold 16pt verdana', 'color': '#8e407a'})
+        })
+    </script>
+</body>
+</html>

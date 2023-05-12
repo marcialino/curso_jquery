@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Mouseenter e Mouseleave</h1>
+
+    <p id="p1">O texto vai mudar a cor, quando o mouse entrar e sair do texto!</p>
+
+    <script>
+        $('#p1').mouseenter(()=>{
+           $('#p1').css('color', '#3fd97f')
+            .mouseleave(()=>{
+                $('#p1').css('color', '#f2116c')
+            })
+        })
+    </script>
+</body>
+</html>

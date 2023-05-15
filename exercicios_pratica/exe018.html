@@ -38,10 +38,12 @@
             }
         })
         $('input:text').focus(()=>{
-            $(this).css('background-color', '#ddd')
+            $('#nome').css('background-color', '#ddd')
+            $('#idade').css('background-color', '#ddd')
         })
-        .blur(()=>{
-            $(this).css('background-color', '#fff')
+        $('input:text').blur(()=>{
+            $('#nome').css('background-color', '#fff')
+            $('#idade').css('background-color', '#fff')
         })
         $('select').change(()=>{
             var txt = 'Módulo Selecionado: '
@@ -51,6 +53,7 @@
             $('#cur_sel').text(txt)
         })
 
+      
 
     </script>
     

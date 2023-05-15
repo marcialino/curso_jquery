@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Método OFF: remove o evento adicionado ao elemento</h1>
+
+    <p>Clique neste texto para mudar a cor de fundo!</p>
+
+    <button id="btn">Clique neste botão para remover o evento de clique do texto</button>
+
+    <script>
+        $('p').on('click',function(){
+            $(this).css('background-color','#f88' )
+        })
+
+        $('button').click(function(){
+            $('p').off('click')
+          })
+
+          /*Para o método off funcionar, você precisa clicar nele primeiro e desativar o click. Quando você clicar no texto, a função clique não funcionará mais.*/
+    </script>
+</body>
+</html>

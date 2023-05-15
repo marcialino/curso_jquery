@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Evento: Select</h1>
+
+    <form>
+        <p><label>Nome:</label><input type="text" id="nome"></p>
+        <p><label>Idade</label> <input type="text" name="idade" id="idade"></p>
+        <p><label>Curso favorito</label></p>
+        <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>jQuery</option>
+        </select>
+        <p id="cur_sel">Curso selecionado:</p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        $('form').submit(()=>{
+
+            var nome = $('#nome').val()
+            var idade = $('#idade').val()
+            var cur_sel = $('#cur_sel')
+            if(nome.length == 0 || idade.length == 0 || cur_sel == 0){
+                alert('Preencha os dados e tente novamente')
+            }else{
+                alert('Formulário enviado.')
+            }
+        })
+        $('input:text').focus(()=>{
+            $(this).css('background-color', '#ddd')
+        })
+        .blur(()=>{
+            $(this).css('background-color', '#fff')
+        })
+        $('select').change(()=>{
+            var txt = 'Módulo Selecionado: '
+            $('select option:selected').each(function(){
+                txt+= $(this).text() + " "
+            })
+            $('#cur_sel').text(txt)
+        })
+
+
+    </script>
+    
+</body>
+</html>

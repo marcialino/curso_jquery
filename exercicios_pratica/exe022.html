@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <style>
+        div{
+            border: 2px solid #000;
+            width: 300px;
+            height: 100px;
+            overflow: scroll;
+            font: normal 12pt verdana
+        }
+    </style>
+</head>
+<body>
+    <h1>Overflow Scroll - caixa que rola conteúdo</h1>
+
+    <div>
+     Nome: Márcia Lino; <br>
+     Naturalidade:Mineira, cidade de Campos Altos;<br/>
+     Profissão: Professora Universitária;<br>
+     Ocupação atual: Aposentada e estudante de tecnologias.
+
+    </div>
+
+    <p></p>
+
+    <script>
+        var num = 0
+        $('div').scroll(()=>{
+            $('p').text(num+=1)
+        })
+    </script>
+</body>
+</html>

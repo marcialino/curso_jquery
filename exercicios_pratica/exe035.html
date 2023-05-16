@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios do Curso de jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Método Siblings</h1>
+
+    <div style="width: 400px;">
+    <p id="p1">Vicente e Márcia Lino</p>
+    <p> <span>Alice Lino</span></p>
+    <h1>Minas Gerais</h1>
+    <h2>Belo Horizonte</h2>
+    <p>Márcio Lino</p>
+    <p>Paulo Lino</p>
+    </div>
+
+    <script>
+        
+        $('h2').siblings().css({'border':'1px solid #f00'})
+        $('#p1').css('font', 'bold 14pt verdana')
+
+    </script>
+</body>
+</html>

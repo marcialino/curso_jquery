@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <h1>Método Find</h1>
+
+    <div>
+        <p>Cursos de Tecnologia</p>
+        <p>
+            <span>Curso de jQuery</span>
+        </p>
+    </div>
+
+    <script>
+        /*o primeiro método seleciona todos os span que estiver dentro da Div.
+        O segundo método seleciona todos os filhos da Div*/
+        $('div').find('span').css('font', 'bold 14pt verdana')
+        
+        $('div').find('*').css({'border': '2px solid #f2306d'})
+
+    </script>
+
+</body>
+</html>

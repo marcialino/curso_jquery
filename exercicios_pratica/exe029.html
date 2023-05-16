@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> 
+
+    <style>
+        span, strong, p{
+            padding: 25px;
+            display: block;
+            border: 2px solid #000;
+       
+    </style>
+
+</head>
+<body>
+    <div id="log"></div>
+
+    <div>
+        <p>
+            <strong>
+                <span>Clique</span>
+            </strong>
+        </p>
+    </div>
+
+    <script>
+        $('body').click(function(event){
+            $('#log').html('Elemento clicado: '+event.target.nodeName)
+        })
+    </script>
+</body>
+</html>

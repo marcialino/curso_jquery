@@ -33,11 +33,12 @@
   
 
   <script>
+    /* O hide esconde e o show mostra. Você pode pedir para esconder todos os p ou escolher um deles. Para todos coloque: $('p'), para um deles, escolha: first ou last*/
     $('#btn1').click(()=>{
-        $('p').hide('fast')
+        $('p:first').hide('fast')
     })
     $('#btn2').click(()=>{
-        $('p').show('slow')
+        $('p:first').show('slow')
     })
   </script>
 </body>

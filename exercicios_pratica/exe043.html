@@ -13,6 +13,13 @@
         .fundo{
             background-color: red;
         }
+        body{
+            font: normal 12pt Verdana;
+        }
+        .fundo1{
+            border: 2px solid black;
+            color: blueviolet;
+        }
     </style>
 
 </head>
@@ -27,12 +34,28 @@
         </ol>
     </form>
 
+    <div>
+        <p>Estou estudando tecnologia: Curso jQuery.</p>
+        <p>Esta linguagem contribui para minimizar os códigos do JS.</p>
+    </div>
+    <input type="button" id="btn1" value="Add">
+    <input type="button" id="btn2" value="Remove">
+
     <script>
         $('#lista').hover(function(){
             $(this).addClass('fundo')
         }, function(){
             $(this).removeClass('fundo')
         })
+
+        $('#btn1').click(function(){
+            $('p').addClass('fundo1')
+        })
+        $('#btn2').click(function(){
+            $('p').removeClass('fundo1')
+        })
+          
+        
     </script>
 </body>
 </html>

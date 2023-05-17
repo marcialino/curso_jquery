@@ -13,6 +13,9 @@
         .fundo{
             background-color: royalblue;
         }
+        .fonte{
+            font: bold 12pt verdana;
+        }
       
     </style>
 
@@ -31,6 +34,8 @@
             <li>Paulo Lino</li>
         </ul>
     </div>
+    <input type="button" id="btn1"  value="Add">
+    <input type="button" id="btn2" value="Remove">
 
     <script>
         $('#lista li:last').hover(function(){
@@ -43,6 +48,13 @@
             $(this).addClass('fundo')
         },function(){
             $(this).removeClass('fundo')
+        })
+
+        $('#btn1').click(function(){
+            $('#lista,#lista1').addClass('fonte')
+        })
+        $('#btn2').click(function(){
+            $('#lista , #lista1').removeClass('fonte')
         })
     </script>
 </body>

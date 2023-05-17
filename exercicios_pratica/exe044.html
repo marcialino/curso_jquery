@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+    <style>
+        body{
+            font: normal 12pt verdana;
+        }
+        #btn1, #btn2{
+            font: bold 10pt verdana;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Métodos Hide e Show</h1>
+
+  <p>Com o jQuery é possível dar mais dinamismo ao site!</p>
+  <p>Para isso, pode-se usar os métodos Hide e Show!</p>
+
+  
+    <input type="button" id="btn1" value="Hide">
+    <input type="button" id="btn2" value="Show">
+  
+
+  <script>
+    $('#btn1').click(()=>{
+        $('p').hide('fast')
+    })
+    $('#btn2').click(()=>{
+        $('p').show('slow')
+    })
+  </script>
+</body>
+</html>

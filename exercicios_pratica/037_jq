@@ -1,0 +1,9 @@
+
+
+$(document).ready(function(){
+    $('a').click(()=>{
+        $('#p1').text('O link clicado está funcionando!') 
+})
+
+})
+

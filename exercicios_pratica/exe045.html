@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <h1>Métodos Find e Each</h1>
+
+    <form>
+        <ol id="lista">
+            <li>Manga</li>
+            <li>Banana</li>
+            <li>Maça</li>
+        </ol>
+        <p>Frutas que mais gosto.</p>
+        <p>Vamos comprar!</p>
+    </form>
+
+    <script>
+        $('#lista').find('li').each(function(){
+            $(this).html($(this).html()+ ' - item')
+        })
+        $('body').find('p').each(function(){
+            $(this).html($(this).html()+ ' - fim do parágrafo')
+        })
+    </script>
+</body>
+</html>

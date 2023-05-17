@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Curso jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous">
+    </script>
+
+
+</head>
+<body>
+    <h1>Uso do If e Else no jQuery</h1>
+
+    <form>
+        <p><label>Nome:</label> <input type="text" id="nome"></p>
+
+        <p><label>Sobrenome:</label> <input type="text" id="sobre"></p>
+
+        <p><label>Contato</label> <input type="text" id="cont"></p>
+    </form>
+
+    <input type="button" id="btn" value="Enviar">
+    
+    <script>
+        $('#btn').click(()=>{
+            var nome = $('#nome').val()
+            var sobre = $('#sobre').val()
+            if(nome == sobre){
+                alert('Preencha os dados corretamente, antes de enviar.')
+            }else{
+                alert('Dados enviados corretamente!')
+            }
+        })
+    </script>
+</body>
+</html>
